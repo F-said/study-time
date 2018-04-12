@@ -1,0 +1,65 @@
+html,body{margin:0;}
+header{
+    position: fixed;
+    top:0;
+    height: 120px;
+    width: 100%;
+    background: white;
+    display: flex;
+    align-items: center;
+}
+header * {
+    display: inline;
+}
+header li {
+    font-family:"Bookman Old Style";
+    margin: 20px;
+}
+
+main{
+    margin-top: 128px;
+}
+
+@supports (height: 100vh) {
+    body{
+        background: linear-gradient(to right top, #0089f2 50%, #DDD 50%);
+        background-size: 100% calc(100% - 100vh + 129px);
+        background-repeat: no-repeat;
+    }
+
+    body:before{
+        content:'';
+        position: fixed;
+        top: 128px;
+        bottom: 0;
+        width: 100%;
+        z-index: -1;
+        background: white;
+    }
+}
+
+body{
+    font-family: "Bookman Old Style";
+    font-size: 1.25rem;
+}
+main,header{
+    padding: 10px 10%;
+    box-sizing: border-box;
+}
+h1 {
+    font-family:"Bookman Old Style";
+    font-weight:700;
+    font-size:56px;
+}
+h2 {
+    font-family:"Bookman Old Style";
+}
+h4 {
+    font-family:"Bookman Old Style";
+}
+.orange{
+    color: orangered;
+}
+.blue{
+    color: #0089f2;
+}
