@@ -9,6 +9,5 @@ public class Course {
 
     public Course(String courseName, String professorFName, String professorLName, String courseBegin, String courseEnd,
                   short examNum) {
-
     }
 }
