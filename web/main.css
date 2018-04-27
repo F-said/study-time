@@ -4,7 +4,7 @@ header{
     top:0;
     height: 120px;
     width: 100%;
-    background: white;
+    background: #8b8b83;
     display: flex;
     align-items: center;
 }
@@ -34,7 +34,7 @@ main{
         bottom: 0;
         width: 100%;
         z-index: -1;
-        background: white;
+        background:#E8E9EA;
     }
 }
 
@@ -62,4 +62,7 @@ h4 {
 }
 .blue{
     color: #0089f2;
+}
+.black{
+    color: #000000;
 }

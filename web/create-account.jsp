@@ -15,8 +15,8 @@
     <h1>STUDY<span class="orange">TIME</span>!</h1>
     <nav>
         <ul class="nav navbar-nav">
-            <li><a href="login.jsp"><h4>Log In</h4></a></li>
-            <li><a href="create-account.jsp"><h4>Create Account</h4></a></li>
+            <li><a href="login.jsp"><h4><span class="black">Log In</span></h4></a></li>
+            <li><a href="create-account.jsp"><h4><span class="black">Create Account</span></h4></a></li>
         </ul>
     </nav>
 </header>
