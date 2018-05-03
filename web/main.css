@@ -4,7 +4,7 @@ header{
     top:0;
     height: 120px;
     width: 100%;
-    background: #8b8b83;
+    background: whitesmoke;
     display: flex;
     align-items: center;
 }
@@ -12,7 +12,7 @@ header * {
     display: inline;
 }
 header li {
-    font-family:"Bookman Old Style";
+    font-family:"Bookman Old Style", serif;
     margin: 20px;
 }
 
@@ -22,9 +22,8 @@ main{
 
 @supports (height: 100vh) {
     body{
-        background: linear-gradient(to right top, #0089f2 50%, #DDD 50%);
         background-size: 100% calc(100% - 100vh + 129px);
-        background-repeat: no-repeat;
+        background: linear-gradient(to right top, #0089f2 50%, #DDD 50%) no-repeat;
     }
 
     body:before{
@@ -39,7 +38,7 @@ main{
 }
 
 body{
-    font-family: "Bookman Old Style";
+    font-family: "Bookman Old Style", serif;
     font-size: 1.25rem;
 }
 main,header{
@@ -47,15 +46,17 @@ main,header{
     box-sizing: border-box;
 }
 h1 {
-    font-family:"Bookman Old Style";
+    font-family: "Bookman Old Style", serif;
     font-weight:700;
     font-size:56px;
+    margin-right:400px;
+    margin-left:-80px;
 }
 h2 {
-    font-family:"Bookman Old Style";
+    font-family:"Bookman Old Style", serif;
 }
 h4 {
-    font-family:"Bookman Old Style";
+    font-family:"Bookman Old Style", serif;
 }
 .orange{
     color: orangered;
@@ -65,4 +66,38 @@ h4 {
 }
 .black{
     color: #000000;
+}
+.general-form{
+    padding-left:150px;
+    margin-left:350px;
+    margin-right:300px;
+    margin-top:150px;
+    margin-bottom:100px;
+    background: lavender;
+    border: dotted #0089f2 7px;
+    background-clip:padding-box;
+}
+
+.login-form{
+    padding-left:150px;
+    margin-left:350px;
+    margin-right:300px;
+    margin-top:100px;
+    margin-bottom:100px;
+    background: lavender;
+    border: dotted #0089f2 7px;
+    background-clip:padding-box;
+}
+
+.timer{
+    font-family: sans-serif;
+    display: inline-block;
+    font-weight: 100;
+    text-align: center;
+    font-size: 30px;
+}
+.timer div > span{
+    padding: 15px;
+    border-radius: 3px;
+    display: inline-block;
 }

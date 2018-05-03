@@ -22,6 +22,7 @@
 </header>
 <body>
 <main>
+    <div class="general-form">
     <form action="login.jsp" method="POST">
         <div class="form-group">
             User Name<br/>
@@ -36,13 +37,14 @@
             <input type="password" name="Confirm Password"/>
         </div>
         Institution<br/>
-        <select name="cars">
+        <select name="college">
             <option value="Blank"> </option>
             <option value="WCC">Westchester Community College</option>
         </select><br/>
         <br/>
-        <button type="submit" class="btn btn-default">Create</button>
+        <button type="submit" class="btn btn-default" value="register">Create</button>
     </form>
+    </div>
 </main>
 </body>
 </html>

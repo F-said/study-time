@@ -2,7 +2,7 @@ package Model;
 
 public class User {
     private String userName, password, college;
-    private int StudentID; 
+    private int StudentID;
 
     public User(String userName, String password, String college) {
         this.userName = userName;

@@ -22,6 +22,7 @@
 </header>
 <body>
 <main>
+    <div class="login-form">
     <form action="login.jsp">
         <div class="form-group">
             User Name<br/>
@@ -34,6 +35,7 @@
         <button type="submit" class="btn btn-default">Submit</button>
         <a href="create-account.jsp">Forgot Password?</a>
     </form>
+    </div>
 </main>
 </body>
 </html>
