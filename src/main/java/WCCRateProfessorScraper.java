@@ -1,15 +1,13 @@
-package Model;
-
 import org.jsoup.*;
 import org.jsoup.nodes.*;
 import org.jsoup.select.*;
 import java.io.*;
 
-public class WCCRateProfessorScrape {
+public class WCCRateProfessorScraper {
     private float difficulty;
     private String profFName, profLName;
 
-    WCCRateProfessorScrape(String profFName, String profLName) {
+    WCCRateProfessorScraper(String profFName, String profLName) {
         this.profFName = profFName;
         this.profLName = profLName;
 

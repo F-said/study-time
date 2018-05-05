@@ -1,23 +1,22 @@
-package Model;
-
 import java.util.*;
 
 public class Course {
-    private String courseName, professorFName, professorLName;
+    private String courseName, professorFName, professorLName, campus;
     Date courseBegin, courseEnd;
     private int creditHours, recommendedHours, examNum;
     private float recommendedHoursEmphasis;
     private Date[] examDates;
-    boolean lowQuizDropped, lowExamDropped, courseCompleted;
+    boolean courseCompleted;
 
     public Course(String courseName, String professorFName, String professorLName, Date courseBegin, Date courseEnd,
-                  int examNum) {
+                  int examNum, String campus) {
         this.courseName = courseName;
         this.professorFName = professorFName;
         this.professorLName = professorLName;
         this.examNum = examNum;
+        this.campus = campus;
 
-        WCCCourseCatalogScrape parse = new WCCCourseCatalogScrape(courseName);
+        WCCCourseCatalogScraper parse = new WCCCourseCatalogScraper(courseName);
         WCCRateProfessorScraper rate = new WCCRateProfessorScraper(professorFName, professorLName);
 
         creditHours = parse.getCreditHours();

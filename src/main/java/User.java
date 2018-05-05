@@ -1,7 +1,5 @@
-package Model;
-
 public class User {
-    private String userName, password, college;
+    private String userName, password, college, campus;
     private int StudentID;
 
     public User(String userName, String password, String college) {

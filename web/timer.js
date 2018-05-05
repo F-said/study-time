@@ -36,20 +36,4 @@ function timer(PassedMinute){
             }, 1000);
         }
     }
-    /*
-    var timer = setInterval(function(){
-        minu = minute;
-        sec = second;
-        document.getElementById("minute").innerHTML = minu;
-        document.getElementById("second").innerHTML =sec;
-        sec--;
-        if (sec < 0) {
-            minu--;
-            sec = 60;
-        }
-        if(minu < 0) {
-            clearInterval(timer);
-        }
-    }, 1000);
-    */
 }

@@ -1,15 +1,13 @@
-package Model;
-
 import org.jsoup.*;
 import org.jsoup.nodes.*;
 import org.jsoup.select.*;
 import java.io.*;
 
-public class WCCCourseCatalogScrape {
+public class WCCCourseCatalogScraper {
     private int creditHours;
     private String courseMajor, courseLevel;
 
-    WCCCourseCatalogScrape(String courseName) {
+    WCCCourseCatalogScraper(String courseName) {
         this.courseLevel = courseName.substring(courseName.length() - 3);
         this.courseMajor = courseName.substring(0, 5);
         try {
