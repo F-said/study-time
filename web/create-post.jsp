@@ -2,21 +2,15 @@
 <%@ page import="java.sql.DriverManager"%>
 <%@ page import="java.sql.Statement"%>
 <%@ page import="java.sql.ResultSet"%>
-<%--
-  Created by IntelliJ IDEA.
-  User: farukhsaidmuratov
-  Date: 5/5/18
-  Time: 5:56 PM
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Create.JSP</title>
+    <title>create-post.JSP</title>
 </head>
 <body>
 <%
-    if(request.getParameter("college").equals("Blank")) {
+    if(request.getParameter("college").equals("Blank") || request.getParameter("userName").equals("")
+            || request.getParameter("password").equals("") || request.getParameter("confpassword").equals("") ) {
         response.sendRedirect("create-account-missingvalues.jsp");
         return;
     }

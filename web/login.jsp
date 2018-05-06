@@ -1,9 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: farukhsaidmuratov
-  Date: 4/8/18
-  Time: 11:41 PM
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -24,17 +18,16 @@
 <body>
 <main>
     <div class="login-form">
-    <form action="login.jsp">
+    <form action="login-post.jsp" method="Post">
         <div class="form-group">
             User Name<br/>
-            <input type="text" name="User Name"/>
+            <input type="text" name="userName"/>
         </div>
         <div class="form-group">
             Password<br/>
-            <input type="text" name="Password"/>
+            <input type="password" name="Password"/>
         </div>
         <button type="submit" class="btn btn-default">Submit</button>
-        <a href="create-account.jsp">Forgot Password?</a>
     </form>
     </div>
 </main>

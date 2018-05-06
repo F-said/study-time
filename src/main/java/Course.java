@@ -32,4 +32,8 @@ public class Course {
         else if (recommendedHoursEmphasis > 5)
             recommendedHours += 2;
     }
+
+    public int getRecommendedHours() {
+        return recommendedHours;
+    }
 }

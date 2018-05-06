@@ -1,7 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Create Account</title>
+    <title>Log In/Create Account</title>
 </head>
 <header>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" />
@@ -17,30 +17,21 @@
 </header>
 <body>
 <main>
-    <div class="general-form">
-        <form action="create-post.jsp" method="POST">
+    <div class="login-form">
+        <form action="login-post.jsp" method="Post">
             <div class="form-group">
                 User Name<br/>
                 <input type="text" name="userName"/>
             </div>
             <div class="form-group">
                 Password<br/>
-                <input type="password" name="password"/>
+                <input type="password" name="Password"/>
             </div>
-            <div class="form-group">
-                Confirm Password<br/>
-                <input type="password" name="confpassword"/>
-            </div>
-            Institution<br/>
-            <select name="college">
-                <option value="Blank" name="college"> </option>
-                <option value="Westchester Community College" name="college">Westchester Community College</option>
-            </select><br/>
-            <br/>
-            <button type="submit" class="btn btn-default" value="register">Create</button>
+            <button type="submit" class="btn btn-default">Submit</button>
         </form>
         <span class="red">Please fill missing entries.</span>
     </div>
 </main>
 </body>
 </html>
+
