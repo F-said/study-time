@@ -5,8 +5,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class practiceconnect {
-    public static void main(String[] args) throws IOException, SQLException, ClassNotFoundException {
+public class Login {
+    Login() {
         try {
             Class.forName("com.mysql.jdbc.Driver");
             Connection con = DriverManager.getConnection("jdbc:mysql://35.188.254.244:3306/studytime","root","T1konder0ga");
@@ -26,5 +26,8 @@ public class practiceconnect {
             ex.printStackTrace();
         }
     }
-}
 
+    public static void main(String[] args) throws IOException, SQLException, ClassNotFoundException {
+
+    }
+}

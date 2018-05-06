@@ -1,8 +1,8 @@
 <%--
   Created by IntelliJ IDEA.
   User: farukhsaidmuratov
-  Date: 5/2/18
-  Time: 2:01 PM
+  Date: 5/5/18
+  Time: 5:44 PM
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -13,12 +13,12 @@
 <header>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" />
     <link rel= "stylesheet" href= "main.css">
-    <h1>STUDY<span class="orange">TIME</span>!</h1>
+    <h1>STUDY<a href="index.jsp" style="color: #fb3f00; text-decoration: none;"><span class="orange">TIME</span></a>!</h1>
     <nav>
         <ul class="nav navbar-nav">
-            <li><a href="homepage.jsp"><h4><span class="black">Courses</span></h4></a></li>
-            <li><a href="timer.jsp"><h4><span class="black">Timer</span></h4></a></li>
-            <li><a href="homepage.jsp"><h4><span class="black">Calendar</span></h4></a></li>
+            <li><a href="homepage.jsp"><h4><span class="black">Log In</span></h4></a></li>
+            <li><a href="create-account.jsp"><h4><span class="black">Create Account</span></h4></a></li>
+            <li><a href="timer-index.jsp"><h4><span class="black">Timer</span></h4></a></li>
         </ul>
     </nav>
 </header>
@@ -27,8 +27,8 @@
     <div class="container">
         <h2>Timer</h2>
         <p>Studying should be done in set blocks, as opposed to continuous sessions. After one completed block,
-        students should take a 5-10 minute break. After 4 consecutive blocks, students should take a 15-20 minute
-        break</p>
+            students should take a 5-10 minute break. After 4 consecutive blocks, students should take a 15-20 minute
+            break</p>
         <select name="Time Blocks">
             <option value="Blank"> </option>
             <option value="WCC">30 Minutes (Pomodore Method) </option>

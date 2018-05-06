@@ -1,12 +1,10 @@
-import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.sql.Statement;
 
-public class practiceconnect {
-    public static void main(String[] args) throws IOException, SQLException, ClassNotFoundException {
+public class Register {
+    Register(String user, String password, String college) {
         try {
             Class.forName("com.mysql.jdbc.Driver");
             Connection con = DriverManager.getConnection("jdbc:mysql://35.188.254.244:3306/studytime","root","T1konder0ga");
@@ -27,4 +25,3 @@ public class practiceconnect {
         }
     }
 }
-

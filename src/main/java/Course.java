@@ -1,7 +1,7 @@
 import java.util.*;
 
 public class Course {
-    private String courseName, professorFName, professorLName, campus;
+    private String courseName, professorFName, professorLName, college;
     Date courseBegin, courseEnd;
     private int creditHours, recommendedHours, examNum;
     private float recommendedHoursEmphasis;
@@ -9,12 +9,12 @@ public class Course {
     boolean courseCompleted;
 
     public Course(String courseName, String professorFName, String professorLName, Date courseBegin, Date courseEnd,
-                  int examNum, String campus) {
+                  int examNum, String college) {
         this.courseName = courseName;
         this.professorFName = professorFName;
         this.professorLName = professorLName;
         this.examNum = examNum;
-        this.campus = campus;
+        this.college = college;
 
         WCCCourseCatalogScraper parse = new WCCCourseCatalogScraper(courseName);
         WCCRateProfessorScraper rate = new WCCRateProfessorScraper(professorFName, professorLName);
