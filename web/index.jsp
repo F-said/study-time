@@ -30,7 +30,7 @@
   <br/><hr/><br/>
   <h2><span class="blue">Am I guaranteed to pass if I use your website?</span></h2>
   <br/>
-  <h4>Maybe</h4>
+  <h4>You're guaranteed to be organized.</h4>
   <br/><hr/><br/>
   <h2><span class="blue">How does it work?</span></h2>
   <br/>

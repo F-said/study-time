@@ -1,3 +1,5 @@
+package Model;
+
 import org.jsoup.*;
 import org.jsoup.nodes.*;
 import org.jsoup.select.*;
@@ -7,7 +9,7 @@ public class WCCRateProfessorScraper {
     private float difficulty;
     private String profFName, profLName;
 
-    WCCRateProfessorScraper(String profFName, String profLName) {
+    public WCCRateProfessorScraper(String profFName, String profLName) {
         this.profFName = profFName;
         this.profLName = profLName;
 

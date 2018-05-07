@@ -12,7 +12,7 @@
             <li><a href="homepage.jsp"><h4><span class="black">Courses</span></h4></a></li>
             <li><a href="timer.jsp"><h4><span class="black">Timer</span></h4></a></li>
             <li><a href="homepage.jsp"><h4><span class="black">Calendar</span></h4></a></li>
-            <li><a href="Logout.jsp"><h4><span class="black">Log out</span></h4></a></li>
+            <li><a href="logout.jsp"><h4><span class="black">Log out</span></h4></a></li>
         </ul>
     </nav>
 </header>

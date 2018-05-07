@@ -1,3 +1,5 @@
+package Model;
+
 import org.jsoup.*;
 import org.jsoup.nodes.*;
 import org.jsoup.select.*;
@@ -7,7 +9,7 @@ public class WCCCourseCatalogScraper {
     private int creditHours;
     private String courseMajor, courseLevel;
 
-    WCCCourseCatalogScraper(String courseName) {
+    public WCCCourseCatalogScraper(String courseName) {
         this.courseLevel = courseName.substring(courseName.length() - 3);
         this.courseMajor = courseName.substring(0, 5);
         try {
@@ -41,6 +43,13 @@ public class WCCCourseCatalogScraper {
         }
 
         Elements course = courseTag.getElementsByClass("width");
+
+        // If course does not exist, return -1
+        if(course.size() == 0) {
+            creditHours = -1;
+            return;
+        }
+
         Elements courselinks = course.select("a[href]");
         String link = courselinks.first().attr("abs:href");
 

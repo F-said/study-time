@@ -26,6 +26,9 @@
 
             if(resultSet.next()) {
                 if(resultSet.getObject("Password").equals(password)) {
+                    session.setAttribute("userID", resultSet.getInt("StudentID"));
+                    session.setAttribute("college", resultSet.getString("College"));
+
                     response.sendRedirect("homepage.jsp");
                     return;
                 }

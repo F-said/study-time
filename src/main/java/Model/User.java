@@ -1,8 +1,10 @@
+package Model;
+
 public class User {
     private String userName, password, college;
     private int StudentID;
 
-    public User(String userName, String password, String college) {
+    User(String userName, String password, String college) {
         this.userName = userName;
         this.password = password;
         this.college = college;
@@ -17,14 +19,18 @@ public class User {
     public String getCollege() {
         return college;
     }
+    public int getStudentID() { return StudentID; }
 
-    void setUserName(String userName) {
+    public void setUserName(String userName) {
         this.userName = userName;
     }
-    void setPassword(String password) {
+    public void setPassword(String password) {
         this.password = password;
     }
-    void setCollege(String college) {
+    public void setCollege(String college) {
         this.college = college;
+    }
+    public void setStudentID(int ID) {
+        this.StudentID = ID;
     }
 }

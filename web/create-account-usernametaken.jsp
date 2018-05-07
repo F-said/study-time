@@ -39,7 +39,7 @@
             <br/>
             <button type="submit" class="btn btn-default" value="register">Create</button>
         </form>
-        <span class="red">User name already in use. Please choose another one.</span>
+        <span class="red">Model.User name already in use. Please choose another one.</span>
     </div>
 </main>
 </body>
