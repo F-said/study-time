@@ -26,14 +26,16 @@
         Object courseIDObj = session.getAttribute("courseID");
         int courseID = (int) courseIDObj;
 
-        String grade = request.getParameter("grade");
+        ResultSet resultSetGrade = statement.executeQuery("SELECT * FROM Grades WHERE CourseID = " + courseID  +
+                " AND StudentID=" + studentID  + " AND ProfessorID="+ profID);
+        resultSetGrade.next();
+        String setGrade = resultSetGrade.getString("Grade");
+        resultSetGrade.close();
 
-        ResultSet resultSetGrade = statement.executeQuery("SELECT * FROM Professor WHERE CourseID = '" + courseID + "'" +
-                "AND StudentID='" + studentID  + "' AND ProfessorID='"+ profID + "'");
-
-        if(resultSetGrade.getString("Grade") != null) {
-            statement.executeUpdate("UPDATE Grades SET Grade='" + grade + "'");
-            resultSetGrade.close();
+        if(setGrade == null) {
+            String grade = request.getParameter("grade");
+            statement.executeUpdate("UPDATE Grades SET Grade='" + grade + "' WHERE CourseID = " + courseID +
+                    " AND StudentID=" + studentID  + " AND ProfessorID="+ profID);
             response.sendRedirect("homepage.jsp");
             return;
         }
@@ -41,7 +43,6 @@
             response.sendRedirect("complete-course-alreadycompleted.jsp");
             return;
         }
-
     } catch(Exception c) {
         c.getCause();
     }
