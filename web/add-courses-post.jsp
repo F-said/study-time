@@ -71,10 +71,10 @@
                     WCCRateProfessorScraper getProf = new WCCRateProfessorScraper(fname, lname);
                     Course course = new Course();
 
-                    int creditHours = getCreds.getCreditHours();
+                    int creditHours = getCreds.getCreditHours() * 2;
                     float difficulty = getProf.getDifficulty();
                     course.setRecommendedHoursEmphasis(difficulty);
-                    int recHours = course.calcRecHours(creditHours*2);
+                    int recHours = course.calcRecHours(creditHours);
 
                     if(creditHours != -1 && difficulty != -1.0) {
                         ResultSet resultSetCourseCheck = statement.executeQuery("SELECT * FROM Courses WHERE Name = '" + cname + "'" +

@@ -116,3 +116,14 @@ h4 {
     border: dotted #0089f2 7px;
     background-clip:padding-box;
 }
+
+.submit-grade-form{
+    padding-left:50px;
+    margin-left:350px;
+    margin-right:300px;
+    margin-top:150px;
+    margin-bottom:100px;
+    background: lavender;
+    border: dotted #0089f2 7px;
+    background-clip:padding-box;
+}
