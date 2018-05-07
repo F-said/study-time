@@ -55,6 +55,7 @@
             </div>
             <button type="submit" class="btn btn-default">Create</button>
         </form>
+        <span class="red">Fill in all values when creating course. Please try again.</span>
     </div>
 </main>
 </body>

@@ -55,6 +55,7 @@
             </div>
             <button type="submit" class="btn btn-default">Create</button>
         </form>
+        <span class="red">Course, or Professor does not exist in your college. Please be sure to input names as seen on syllabus.</span>
     </div>
 </main>
 </body>

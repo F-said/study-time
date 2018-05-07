@@ -55,6 +55,7 @@
             </div>
             <button type="submit" class="btn btn-default">Create</button>
         </form>
+        <span class="red">Course already exists in your account.</span>
     </div>
 </main>
 </body>

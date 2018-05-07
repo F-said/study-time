@@ -20,7 +20,7 @@
     <%
         if(request.getParameter("CName").equals("") || request.getParameter("begin").equals("") || request.getParameter("end").equals("")
                 || request.getParameter("profFname").equals("") || request.getParameter("profLname").equals("")) {
-            response.sendRedirect("homepage-missingvalues.jsp");
+            response.sendRedirect("add-courses-missingvalues.jsp");
             return;
         }
         else {
@@ -51,15 +51,17 @@
                     Connection con = DriverManager.getConnection("jdbc:mysql://35.188.254.244:3306/studytime","root","T1konder0ga");
                     Statement statement = con.createStatement();
 
-                    ResultSet resultSetCourse = statement.executeQuery("SELECT * FROM Courses WHERE Name = '" + cname + "'" +
-                            "AND Begin='" + sqlstart  + "' AND End='"+ sqlend + "' AND ExamNum='" + examNum + "' AND College='" +
-                            college_name + "'");
+                    ResultSet resultSetCourse = statement.executeQuery("SELECT * FROM Grades, Courses, Professor WHERE " +
+                            "Grades.StudentID=" + studentID  +
+                            " AND Professor.FirstName='" + fname + "'" +
+                            " AND Professor.LastName='" + lname + "'" +
+                            " AND Courses.Name='" + cname + "'");
 
                     int i = 0;
                     while(resultSetCourse.next())
                         i++;
                     if(i != 0) {
-                        response.sendRedirect("homepage-coursealreadyexists.jsp");
+                        response.sendRedirect("add-courses-coursealreadyexists.jsp");
                         return;
                     }
 
@@ -75,8 +77,19 @@
                     int recHours = course.calcRecHours(creditHours*2);
 
                     if(creditHours != -1 && difficulty != -1.0) {
-                        statement.executeUpdate("INSERT INTO Courses VALUES('" + cname + "','" + sqlstart + "','" + sqlend +
-                                "','" + examNum + "','" + getCreds.getCreditHours() + "', NULL,'" + college_name + "')");
+                        ResultSet resultSetCourseCheck = statement.executeQuery("SELECT * FROM Courses WHERE Name = '" + cname + "'" +
+                                "AND Begin='" + sqlstart  + "' AND End='"+ sqlend + "' AND ExamNum='" + examNum + "' AND College='" +
+                                college_name + "'");
+
+                        i = 0;
+                        while(resultSetCourseCheck.next())
+                            i++;
+                        if(i == 0) {
+                            statement.executeUpdate("INSERT INTO Courses VALUES('" + cname + "','" + sqlstart + "','" + sqlend +
+                                    "','" + examNum + "','" + getCreds.getCreditHours() + "', NULL,'" + college_name + "')");
+                        }
+
+                        resultSetCourseCheck.close();
 
                         ResultSet resultSetProf = statement.executeQuery("SELECT * FROM Professor WHERE FirstName = '" + fname + "'" +
                                 "AND LastName='" + lname  + "' AND College='"+ college_name + "'");
@@ -84,14 +97,11 @@
                         i = 0;
                         while(resultSetProf.next())
                             i++;
-                        if(i != 0) {
-                            response.sendRedirect("homepage.jsp");
-                            return;
+                        if(i == 0) {
+                            statement.executeUpdate("INSERT INTO Professor VALUES('" + fname + "','" + lname + "', NULL,'" + college_name + "')");
                         }
 
                         resultSetProf.close();
-
-                        statement.executeUpdate("INSERT INTO Professor VALUES('" + fname + "','" + lname + "', NULL,'" + college_name + "')");
 
                         ResultSet resultSetProfID = statement.executeQuery("SELECT * FROM Professor WHERE FirstName = '" + fname + "'" +
                                 "AND LastName='" + lname  + "' AND College='"+ college_name + "'");
@@ -112,7 +122,7 @@
                         return;
                     }
                     else {
-                        response.sendRedirect("homepage-courseDoesNotExist.jsp");
+                        response.sendRedirect("add-courses-courseDoesNotExist.jsp");
                         return;
                     }
                 }

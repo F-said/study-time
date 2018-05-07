@@ -28,7 +28,7 @@
             <option value="WCC">30 Minutes (Pomodore Method) </option>
             <option value="WCC">40 Minutes</option>
             <option value="WCC">50 Minutes (MIT Method)</option>
-        </select><br/>s
+        </select><br/>
         <div class="timer">
             <h2><span class="minutes" id="minute"></span> : <span class="seconds" id="second"></span></h2>
         </div>

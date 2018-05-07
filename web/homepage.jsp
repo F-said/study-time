@@ -74,13 +74,16 @@
     <div class="container">
         <h2>Courses</h2>
     <p>Click "Add courses" to add more courses. Click the "See More" button to view more information about your course.</p>
+        <p>Click the red "Delete" button to remove course. Click the blue button underneath the "Completed" column to
+        indicate that you've completed the course.</p>
     <table class="table table-hover">
         <thead>
         <tr>
             <th>Course Name</th>
             <th>Recommended Hours</th>
             <th>Completed</th>
-            <th>See More</th>
+            <th>Professor</th>
+            <th></th>
         </tr>
         </thead>
         <tbody>
@@ -88,8 +91,13 @@
         <tr>
             <td><%=courses.get(i).getCourseName()%></td>
             <td><%=courses.get(i).getRecommendedHours()%></td>
-            <td><input type="checkbox" name="coursecompleted"></td>
-            <td><button type="submit" class="btn btn-default" value="Seemore">...</button></td>
+            <td><button type="submit" class="btn btn-primary" name="coursecompleted">✓</button></td>
+            <td><%=courses.get(i).getProfessorLName()%></td>
+            <td><form action="delete-course-post.jsp" method="POST"><div class="form-group">
+                <button type="submit" class="btn btn-danger" name="Delete">Delete</button>
+                <% session.setAttribute("courseID", courseIDS.get(i)); %>
+                <% session.setAttribute("profID", profIDS.get(i)); %>
+            </div></form></td>
         </tr>
         <% } %>
         </tbody>

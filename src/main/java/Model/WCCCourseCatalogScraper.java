@@ -11,7 +11,7 @@ public class WCCCourseCatalogScraper {
 
     public WCCCourseCatalogScraper(String courseName) {
         this.courseLevel = courseName.substring(courseName.length() - 3);
-        this.courseMajor = courseName.substring(0, 5);
+        this.courseMajor = courseName.substring(0, courseName.length() - 3);
         try {
             parseWebPage(this.courseMajor, this.courseLevel);
         } catch (IOException io) {
