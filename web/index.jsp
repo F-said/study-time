@@ -39,7 +39,7 @@
   <img src="diagram.png" alt="Diagram" height="500" width="400" style="padding-left:100px; padding-top:50px">
   <br/><br/><br/>
   <footer>
-    <p>Project by Gabriel Diaz, Farukh Saidmuratov 2018</p>
+    <p>Project by Farukh Saidmuratov 2018</p>
   </footer>
 </main>
 </body>
